@@ -1,0 +1,63 @@
+body {
+	background-color: darkblue;
+	font-family: "Comic Sans MS";
+	text-align: center;
+	color: navajowhite;
+	background-image: url("images/twinkling-sky.gif");
+}
+
+h1 {
+	text-align: center;
+	color:  lightgoldenrodyellow;
+	text-shadow: 5px 5px 10px red;
+	word-break: break-all;
+	font-size: 152px;
+	margin: 0em;
+}
+
+h2 {
+	text-align: center;
+	color:  red;
+	text-shadow: 2px 2px 5px lightgoldenrodyellow;
+	word-break: break-all;
+	font-size: 80px;
+	margin: 0em;
+}
+
+h3 {
+	text-align: center;
+	color:  green;
+	text-shadow: 2px 2px 5px whitesmoke;
+	word-break: break-all;
+	font-size: 50px;
+	margin: 0em;
+}
+
+h4 {
+	text-align: center;
+	color:  purple;
+	text-shadow: 2px 2px 5px green;
+	word-break: break-all;
+	font-size: 30px;
+	margin: 0em;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
