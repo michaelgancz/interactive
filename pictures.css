@@ -1,0 +1,114 @@
+body {
+	background-image: url("images/1500-9.jpg");
+	background-color: azure;
+	background-blend-mode: lighten;
+	left: 300px;
+	filter: blur(50px);
+	filter: brightness(0.4);
+	filter: contrast(200%);
+	filter: drop-shadow(16px 16px 20px blue);
+	filter: grayscale(50%);
+	filter: hue-rotate(90deg);
+	filter: invert(75%);
+	filter: opacity(25%);
+	filter: saturate(30%);
+	filter: sepia(60%);
+}
+
+.bg {
+	z-index=10;
+}
+
+.fg {
+	z-index=20;
+}
+
+#peep {
+	position: relative;
+	max-height: 500px;
+	top: -200px;
+	left: 100px;
+	transform: rotate(-45deg);
+}
+
+#oof {
+	position: relative;
+	max-height: 100px;
+	top: -1200px;
+	left: 0px;
+	transform: rotate(-20deg);
+}
+
+#house {
+	position: relative;
+	max-height: 1000px;
+	top: -300px;
+	left: 0px;
+	transform: rotate(0deg);
+	border: 5px solid white;
+}
+
+#closeup {
+	position: relative;
+	max-height: 100px;
+	top: -700px;
+	left: -300px;
+	transform: rotate(0deg);
+}
+
+#diagram {
+	position: relative;
+	max-height: 500px;
+	top: -880px;
+	left: 700px;
+	transform: rotate(160deg);
+}
+
+#portrait {
+	position: relative;
+	max-height: 300px;
+	top: -1400px;
+	left: 150px;
+	transform: rotate(20deg);
+}
+
+#collage {
+	position: relative;
+	max-height: 50px;
+	top: -1430px;
+	left: -530px;
+	transform: rotate(0deg);
+}
+
+#group {
+	position: relative;
+	max-height: 200px;
+	top: -1225px;
+	left: -530px;
+	transform: rotate(0deg);
+}
+
+#abstract {
+	position: relative;
+	max-height: 200px;
+	top: -1700px;
+	left: 100px;
+	transform: rotate(-45deg);
+}
+
+#storefront {
+	position: relative;
+	max-height: 200px;
+	top: -900px;
+	left: -500px;
+	transform: rotate(-0deg);
+}
+
+#rat {
+	position: relative;
+	max-height: 400px;
+	top: -1500px;
+	left: 950px;
+	transform: rotate(-0deg);
+}
+
