@@ -1,0 +1,59 @@
+/* OBJECT TYPES*/
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-around;
+    overflow-wrap: break-word;
+}
+
+.flexbox {
+    width: 50%;
+    overflow-y: scroll;
+    padding: 3%;
+    margin: 1vw;
+    border: black solid 10px;
+    background-color: white;
+}
+
+/* TEXT TYPES */
+#content, html, body {
+    height: 100%;
+    width: 100%
+}
+
+body {
+    font-family: monospace;
+    font-size: 1vw;
+    background-color: lightgray;
+}
+
+.centerbox {
+    justify-content: center;
+    width: 90%;
+}
+
+button {
+    font-family: monospace;
+    font-size: 1vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Draconis;
+    line-height: 50%;
+    font-size: 7vw;
+    margin-left: 1vw;
+    margin-top: 4vw;
+}
+
+.heading {
+    font-family: Draconis;
+    font-size: 5vw;
+}
+
+.story {
+    font-family: Draconis;
+    font-size: 1.5vw;
+}

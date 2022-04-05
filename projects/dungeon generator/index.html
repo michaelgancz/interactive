@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @font-face {
+            font-family: Draconis;
+            src: url(Draconis.otf);
+        }
+    </style>
+    <link rel="stylesheet" href="dungeongenerator.css" />
+    <title>Dungeon Generator</title>
+</head>
+<body>
+    <center>
+        <h1>
+            RPG Dungeon Generator
+        </h1>
+    </center>
+
+    <div class="flex-container">
+        <div class="flexbox">
+            <label for="environments">To begin, choose an environment:</label>
+
+            <select name="environments" id="environments">
+                <option value="999">[choose an environment]</option>
+                <option value="0">Arctic</option>
+                <option value="1">Coastal</option>
+                <option value="2">Desert</option>
+                <option value="3">Forest</option>
+                <option value="4">Grassland</option>
+                <option value="5">Mountain</option>
+                <option value="6">Swamp</option>
+                <option value="7">Underground</option>
+                <option value="8">Underwater</option>
+                <option value="9">Urban</option>
+            </select>
+
+            <p id="vibes">
+                <button onclick="rollAirDice(10)">roll a d10</button> and
+                <button onclick="rollSmellDice(12)">roll a d12</button> <br />
+                <b id="vibes-results">
+                    you rolled a(n) &nbsp;
+                    <c id="air"></c> &nbsp;
+                    and a(n) &nbsp;
+                    <c id="smell"></c>
+                    <br />
+                </b>
+            </p>
+
+            <p id="room1">
+                <button onclick="rollFloorDice(12)">roll a d12</button> and
+                <button onclick="rollFurnitureDice(6)">roll a d12</button> and
+                <button onclick="rollEncounterDice(6)">roll a d6</button> <br />
+                <b id="room1-results">
+                    you rolled a(n) &nbsp;
+                    <c id="floor"></c>, &nbsp;
+                    a(n) &nbsp;
+                    <c id="furniture"></c>, &nbsp;
+                    and a &nbsp;
+                    <c id="encounter"></c>
+                    <br />
+                </b>
+            </p>
+
+            <p id="encounter">
+                <div id="arcticencounter">
+                    <button onclick="rollArcticMonsterDice(4)">roll a d4</button> <br />
+                    <b id="arcticmonster-results">
+                        you rolled a &nbsp;
+                        <c id="arcticmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="coastalencounter">
+                    <button onclick="rollCoastalMonsterDice(4)">roll a d4</button> <br />
+                    <b id="coastalmonster-results">
+                        you rolled a &nbsp;
+                        <c id="coastalmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="desertencounter">
+                    <button onclick="rollDesertMonsterDice(4)">roll a d4</button> <br />
+                    <b id="desertmonster-results">
+                        you rolled a &nbsp;
+                        <c id="desertmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="forestencounter">
+                    <button onclick="rollForestMonsterDice(4)">roll a d4</button> <br />
+                    <b id="forestmonster-results">
+                        you rolled a &nbsp;
+                        <c id="forestmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="grasslandencounter">
+                    <button onclick="rollGrasslandMonsterDice(4)">roll a d4</button> <br />
+                    <b id="grasslandmonster-results">
+                        you rolled a &nbsp;
+                        <c id="grasslandmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="mountainencounter">
+                    <button onclick="rollMountainMonsterDice(4)">roll a d4</button> <br />
+                    <b id="mountainmonster-results">
+                        you rolled a &nbsp;
+                        <c id="mountainmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="swampencounter">
+                    <button onclick="rollSwampMonsterDice(4)">roll a d4</button> <br />
+                    <b id="swampmonster-results">
+                        you rolled a &nbsp;
+                        <c id="swampmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="underdarkencounter">
+                    <button onclick="rollUnderdarkMonsterDice(4)">roll a d4</button> <br />
+                    <b id="underdarkmonster-results">
+                        you rolled a &nbsp;
+                        <c id="underdarkmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="underwaterencounter">
+                    <button onclick="rollUnderwaterMonsterDice(4)">roll a d4</button> <br />
+                    <b id="underwatermonster-results">
+                        you rolled a &nbsp;
+                        <c id="underwatermonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="urbanencounter">
+                    <button onclick="rollUrbanMonsterDice(4)">roll a d4</button> <br />
+                    <b id="urbanmonster-results">
+                        you rolled a &nbsp;
+                        <c id="urbanmonster"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="trapencounter">
+                    <button onclick="rollTrapDice(6)">roll a d6</button> <br />
+                    <b id="trap-results">
+                        you rolled a &nbsp;
+                        <c id="trap"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="treasureencounter">
+                    <button onclick="rollTreasureDice(6)">roll a d6</button> <br />
+                    <b id="treasure-results">
+                        you rolled a &nbsp;
+                        <c id="treasure"></c>
+                        <br />
+                    </b>
+                </div>
+                <div id="obstacleencounter">
+                    <button onclick="rollObstacleDice(4)">roll a d4</button> <br />
+                    <b id="obstacle-results">
+                        you rolled a &nbsp;
+                        <c id="obstacle"></c>
+                        <br />
+                    </b>
+                </div>
+            </p>
+        </div>
+        <div class="flexbox story">
+            <div class="heading">The Story so far:</div>
+            <p class="story1"></p>
+            <p class="story2"></p>
+            <p class="story3"></p>
+            <p class="story4"></p>
+            <p class="story5"></p>
+            <p class="story6"></p>
+            <p class="story7"></p>
+            <p class="story8"></p>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flexbox centerbox">
+            This website generates semi-random one-room dungeons for tabletop roleplaying games.
+            The user, or dungeon master, begins by selecting a climate environment in which the
+            dungeon is found. The dungeon master may then 'roll' a virtual die for a number of
+            random objects and characeristics that can populate this dungeon. This process and
+            its contents is loosely adapted from the Dungeons & Dragons 5th Edition Dungeon
+            Master's Guide. <br /><br />
+            Designed by Michael Gancz, April 2022
+        </div>
+    </div>
+    <!-- Scripts go at the bottom of your <body> element, below your HTML. Here's a link to the jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- And here's a link to our javascript, written in an external js file called main.js -->
+    <script src="main.js"></script>
+</body>
+</html>
