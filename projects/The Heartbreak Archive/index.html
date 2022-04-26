@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Heartbreak Archive</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <h1> The Heartbreak Archive</h1>
+      <h6> by Michael Gancz and Ren Robins</h6>
+      <div id="spiel">
+          <p id="welcome">
+              Welcome to <i>The Heartbreak Archive</i>, an online open-source museum of
+              breakup texts, job rejection emails, spam, scams, and unanswered cries
+              for help. This archive preserves that
+              specific brand of helplessness which arises when we receive some item of
+              devastating personal news through the fundamentally impersonal medium
+              of online communication.
+          </p>
+          <p>
+              There's an extra twist: you will only be able to view this archive by
+              contributing to it. Once you submit the form below, you will be shown
+              exactly one entry by some other user. You can spend as much time with
+              it as you like, screenshot it, print it, whatever—but if you want to see
+              anything else you'll have to refresh the page and
+              submit the form again with something new.
+              Your submission, if approved, will live anonymously as part of the archive.
+          </p>
+          <p>
+              So, what makes it into the archive? We approve entries that meet the
+              following criteria: <br /> <br />
+              1) All valid entries are image files. You will not be able to
+              submit any other format. <br /> <br />
+              2) All proper nouns, including names of people and institutions, are
+              redacted. A reader should not be able to piece the parties involved
+              in your communications. <br /> <br />
+              3) Your entry is yours to share, not ripped from some
+              other corner of the internet. <br /> <br />
+              4) Lastly, the content of your entry encodes some profound emotion that
+              is offset, altered, or made awkward, cold, or hurtful by the medium of its
+              presentation.
+          </p>
+          <p>
+              If all of this makes sense to you and you're interested in participating,
+              go ahead and submit the form below. Then click the button.
+          </p>
+      </div>
+      <div id="form">
+          <button id="frame" onclick="clickTest()">
+              <iframe class="airtable-embed"
+                      src="https://airtable.com/embed/shrpT4MTwuLLsHAXr?backgroundColor=blue"
+                      frameborder="0" onmousewheel="" width="100%" height="533"
+                      style="background: transparent; border: 1px solid #ccc;" id="myFrame">
+              </iframe>
+              <div>
+                  click here once submitted
+              </div>
+          </button>
+      </div>
+
+      <!-- the HTML includes a template. With JS, we'll put content from airtable into these divs. -->
+      <!--<div id="slide">
+    </div>-->
+      <!-- load the JS files -->
+      <script src="js/airtable.browser.js"></script>
+      <script src="js/main.js"></script>
+  </body>
+</html>
