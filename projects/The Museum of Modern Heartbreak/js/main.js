@@ -1,3 +1,18 @@
+var click = false;
+var clicks = 0;
+function clickTest() {
+    if (clicks == 0) {
+        console.log("click!");
+        click = true;
+        gotAllRows();
+        click = false;
+    }
+    clicks = 1;
+    document.getElementById("spiel").style.display = "none";
+    document.getElementById("myFrame").style.display = "none";
+    document.getElementById("frame").style.display = "none";
+    document.getElementById("refresh").style.display = "block";
+}
 
 // load the airtable library
 var Airtable = require('airtable');
@@ -100,7 +115,6 @@ function showRow(row) {
     }
 }
 
-
 // This sets up an event.
 // When you click on a slide, you replace the content with the message
 // form the next row. 
@@ -116,19 +130,3 @@ function showRow(row) {
 //        showRow(rows[index]);
 //    }
 //})
-
-var click = false;
-var clicks = 0;
-function clickTest() {
-    if (clicks == 0) {
-        console.log("click!");
-        click = true;
-        gotAllRows();
-        click = false;
-    }
-    clicks = 1;
-    document.getElementById("spiel").style.display = "none";
-    document.getElementById("myFrame").style.display = "none";
-    document.getElementById("frame").style.display = "none";
-    document.getElementById("refresh").style.display = "block";
-}
